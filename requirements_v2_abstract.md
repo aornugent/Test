@@ -10,7 +10,7 @@ The object is a **spatially extended dynamical system** on a fixed bounded domai
 
 **Fixed template.** A time-independent scalar potential φ(x) on Ω, not a state variable. It biases transport but does not evolve. (This is the exogenous-template commitment: the spatial substrate is *given*, not dynamical.)
 
-**Slow field.** A continuum density u(x,t) ≥ 0. Crucially, u is not a primitive scalar with a pointwise reaction term: it is the zeroth moment, u = ∫ n(x,a,t) da, of an **internal-state-structured density** n over an internal coordinate a. The internal density evolves by a **transport equation in a** — directed advection along the internal coordinate, a loss (sink) term, and a nonlocal boundary (renewal) condition — with rates that depend on the local field w and on a **low-dimensional parameter vector θ ∈ ℝ^p**. So the local dynamics of u is a **nonlocal, state-structured transport operator**, not a scalar reaction term. (Reference family: first-order transport/renewal equations in an internal coordinate with a nonlocal boundary condition — McKendrick–von Foerster / Sinko–Streifer form.)
+**Slow field.** A continuum density u(x,t) ≥ 0. Crucially, u is not a primitive scalar with a pointwise reaction term: it is the zeroth moment, u = ∫ n(x,s,t) ds, of an **internal-state-structured density** n over an internal coordinate s. The internal density evolves by a **transport equation in s** — directed advection along s (a drift), a loss (sink) term, and a **nonlocal influx at s = 0** whose magnitude is an integral over n — with rates that depend on the local field w and on a **low-dimensional parameter vector θ ∈ ℝ^p**. So the local dynamics of u is a **nonlocal, state-structured transport operator**, not a scalar reaction term. (Reference family: a linear transport/continuity equation in an internal coordinate with a boundary influx — comparable to kinetic transport in a phase-space coordinate, and to size-distribution kinetics in aerosol and crystal-growth physics.)
 
 **Fast field.** A transported field w(x,t) ≥ 0 governed by a **fast** balance (relaxation parameter ε ≪ 1):
 
@@ -34,7 +34,7 @@ The transport moves w down the potential gradient ∇φ and is **gated by a thre
 
 The spatially uniform steady state (u\*, w\*) must be **linearly unstable to a band of nonzero wavenumbers** k ∈ (k₁, k₂): a symmetry-breaking, finite-wavelength (Turing-type) instability, so that the system's **attractor is a spatially structured state**, not the homogeneous one. The instability must arise **intrinsically from the u–w coupling** — the short-range-activation / long-range-inhibition mechanism above — and **not** be inherited from any spatial structure in φ. On a tilted potential (∇φ ≠ 0) the instability is **convective** and the pattern **drifts** (travelling structure).
 
-The post-bifurcation **branch structure is generically multistable** (subcritical/hysteretic branches coexist), so the **selected state is history-dependent**. The apparent variety of stationary morphologies is a single dynamical fact seen from different points on the branch and at different advection strengths. (Reference families: reaction–diffusion–advection and the Turing mechanism — Turing 1952; amplitude/envelope description and the Swift–Hohenberg equation — Swift & Hohenberg 1977; Cross & Hohenberg 1993.)
+The post-bifurcation **branch structure is generically multistable** (subcritical/hysteretic branches are simultaneously stable), so the **selected state is history-dependent**. The apparent variety of stationary morphologies is a single dynamical fact seen from different points on the branch and at different advection strengths. (Reference families: reaction–diffusion–advection systems and the diffusion-driven finite-wavelength (Turing-type) instability, as realised in chemical reaction–diffusion patterns; amplitude/envelope descriptions and the Swift–Hohenberg equation — Swift & Hohenberg 1977; Cross & Hohenberg 1993.)
 
 ### P2 — Threshold-gated redistribution; dependence on the forcing *distribution*
 
@@ -48,13 +48,13 @@ The structured reaction operator (§1) is controlled by a **shared parameter vec
 
 The system must be analysable **both at its attractor** (the stationary or periodic/drifting structured state) **and along transients**, and specifically **under non-autonomous forcing** (drifting 𝒫), where the system can be **dragged through the P1 bifurcation** by the moving forcing. No analysis may assume autonomy or a fixed attractor. The central non-autonomous question is whether the state **tracks** the slowly moving attractor or undergoes a **rate-induced transition**. The desired transient quantities are **rates**: relaxation/return rates, distance to the bifurcation, and critical slowing down near it. (Reference families: non-autonomous and pullback attractors — Kloeden & Rasmussen 2011; rate-induced tipping — Ashwin, Wieczorek, Vitolo & Cox 2012; fast–slow critical transitions — Kuehn 2011.)
 
-### P5 — A distinguished parameter value as a critical point of a parametric growth rate
+### P5 — A distinguished parameter value as a critical point of a parametric Lyapunov exponent
 
-A distinguished value of θ — or a **θ-field θ(x)** over the domain — is picked out by a **variational condition**, not fitted freely. Define Λ(θ′; θ, A) as the **asymptotic growth rate (Lyapunov exponent)** of an infinitesimal perturbation carrying shifted parameters θ′, evaluated in the **field configuration (the w-field) produced by the attractor A of the base-θ system**. The distinguished θ satisfies the **vanishing-gradient condition**
+A distinguished value of θ — or a **θ-field θ(x)** over the domain — is picked out by a **variational condition**, not fitted freely. Define Λ(θ′; θ, A) as the **asymptotic amplification rate (Lyapunov exponent)** of an infinitesimal perturbation carrying shifted parameters θ′, evaluated in the **field configuration (the w-field) produced by the attractor A of the base-θ system**. The distinguished θ satisfies the **vanishing-gradient condition**
 
     ∂Λ/∂θ′ |_{θ′ = θ}  =  0 ,
 
-a **gradient-flow-to-a-critical-point** condition that is **self-consistent**: the field configuration defining Λ is itself generated by the dynamics at θ. The base case is a **single θ-field varying over Ω**, hypothesised to sit locally at this critical point, so that the spatial variation of θ is *fixed by* the spatially varying effective input of P2. (Reference family: critical points of a parametric growth-rate/Lyapunov functional; gradient dynamics on a parameter under a self-consistency constraint.)
+a **gradient-flow-to-a-critical-point** condition that is **self-consistent**: the field configuration defining Λ is itself generated by the dynamics at θ. The base case is a **single θ-field varying over Ω**, hypothesised to sit locally at this critical point, so that the spatial variation of θ is *fixed by* the spatially varying effective input of P2. (Reference family: critical points of a parameter-dependent Lyapunov exponent; gradient dynamics on a parameter under a self-consistency constraint — comparable to marginal-stability selection in pattern-forming systems and to self-consistent-field conditions in physics.)
 
 *(Deferred, out of current scope: the branching of the critical point into a multi-branch solution.)*
 
@@ -96,11 +96,11 @@ None of P1–P5 names what the density u represents. The specification describes
 
 *Classes and canonical labels, not application instances.*
 
-- **Pattern formation:** Turing instability (Turing 1952); amplitude equations and the Swift–Hohenberg equation (Swift & Hohenberg 1977); the pattern-formation-outside-equilibrium framework (Cross & Hohenberg 1993); reaction–diffusion–advection instabilities.
-- **Structured transport:** first-order transport/renewal equations in an internal coordinate with a nonlocal boundary condition (McKendrick–von Foerster / Sinko–Streifer form).
+- **Pattern formation:** diffusion-driven finite-wavelength (Turing-type) instability, as realised in chemical reaction–diffusion systems; amplitude equations and the Swift–Hohenberg equation (Swift & Hohenberg 1977); the nonequilibrium pattern-formation framework (Cross & Hohenberg 1993); reaction–diffusion–advection instabilities.
+- **Structured transport:** a linear transport/continuity equation in an internal coordinate with a boundary influx — comparable to kinetic transport in a phase-space coordinate, and to size-distribution kinetics in aerosol and crystal-growth physics (advection in a size coordinate with a nucleation influx).
 - **Mean-field limits:** McKean–Vlasov dynamics; propagation of chaos (Sznitman 1991).
 - **Multiscale reduction:** geometric singular perturbation and slow manifolds (Tikhonov; Fenichel 1979); adiabatic elimination / slaving.
 - **Threshold / intermittent forcing:** threshold-gated transport; shot-noise-driven and piecewise-deterministic Markov dynamics.
-- **Variational parameter selection:** critical points of a parametric growth-rate (Lyapunov) functional; gradient dynamics on a parameter under a self-consistency constraint.
+- **Distinguished parameter as a critical point:** critical points of a parameter-dependent Lyapunov exponent; gradient dynamics on a parameter under a self-consistency constraint — comparable to marginal-stability selection and self-consistent-field conditions in physics.
 - **Non-autonomous dynamics and tipping:** pullback / non-autonomous attractors (Kloeden & Rasmussen 2011); rate-induced tipping (Ashwin et al. 2012); fast–slow critical transitions (Kuehn 2011).
 - **Inverse problem:** likelihood-free / simulation-based identification and model selection (as a problem class).
